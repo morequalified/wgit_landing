@@ -7,6 +7,12 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 hr {
   display: block;
   width: 100%;
@@ -20,7 +26,8 @@ hr {
 /* Header */
 .container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1230px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -56,7 +63,7 @@ hr {
 
 .nav__link {
   text-decoration: none;
-  color: black;
+  color: #ffffff;
   margin: 0 15px;
   vertical-align: top;
   position: relative;
@@ -960,3 +967,40 @@ hr {
   color: #f38181;
 }
 
+
+
+@media (max-width: 1230px) {
+  /* Intro */
+  .intro__uptitle {
+    font-size: 52px;
+  }
+  
+  .intro__title {
+    font-size: 120px;
+  }
+}
+
+@media (max-width: 990px) {
+  /* Intro */
+  .intro__uptitle {
+    font-size: 32px;
+  }
+  
+  .intro__title {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 770px) {
+}
+
+@media (max-width: 575px) {
+  /* Intro */
+  .intro__uptitle {
+    font-size: 22px;
+  }
+  
+  .intro__title {
+    font-size: 40px;
+  }
+}
