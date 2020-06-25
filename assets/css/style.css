@@ -825,6 +825,13 @@ hr {
   text-decoration: none;
 }
 
+.footer__title {
+  margin: 30px 0;
+  font-size: 14px;
+  color: #333;
+  text-transform: uppercase;
+}
+
 
 /* Subscribe */
 
@@ -884,7 +891,59 @@ hr {
 
 /* Blogs */
 
+.blogs__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.blogs__img {
+  width: 120px;
+  height: 80px;
+}
+
+.blogs__content {
+  padding-left: 20px;
+}
+
+.blogs__title {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 12px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.blogs__title:hover {
+  text-decoration: underline;
+}
+
+.blogs__date {
+  font-size: 13px;
+  color: #999999;
+  font-style: italic;
+  font-weight: 300;
+}
+
+
 /* Instagram */
+.instagram {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.instagram__item {
+  width: 32.33333%;
+  border-bottom: 1px solid #fff;
+}
+
+.instagram__item img {
+  display: block;
+}
+
 
 
 /* Copyright */
