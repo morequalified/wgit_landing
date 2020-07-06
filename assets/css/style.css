@@ -382,13 +382,18 @@ hr {
 
 .services {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .services__item {
-  flex: 1 1 0;
-  padding-left: 85px;
-  padding-right: 35px;
+  width: 33.33333%;
+  padding: 0 35px 40px 85px;
   position: relative;
+  margin-bottom: 40px;
+}
+
+.services__item--border {
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .services__icon {
@@ -423,6 +428,8 @@ hr {
 
 .devices__item {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .devices__item--iphone {
@@ -437,10 +444,19 @@ hr {
 
 .wedo {
   display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
 }
 
 .wedo__item {
   width: 50%;
+  padding: 0 15px;
+}
+
+.wedo__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Accordion */
@@ -522,9 +538,14 @@ hr {
 }
 
 .reviews__photo {
+  display: block;
+  width: 210px;
+  height: 210px;
   border: 2px solid #95e1d3;
 
   position: absolute;
+  border-radius: 50%;
+
   top: 0;
   left: 0;
   z-index: 1;
@@ -994,6 +1015,10 @@ hr {
   }
 
   /* Stat */
+  .stat {
+    justify-content: center;
+  }
+
   .stat__item {
     flex: none;
     width: 33.33333%;
@@ -1005,6 +1030,35 @@ hr {
   .stat__item:last-child {
     border-right: 0;
   }
+
+  /* Services */
+  .services__item {
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  .services__item--border {
+    border-bottom: 0;
+  }
+
+  /* Devices */
+  .section--devices {
+    background-color: #f38181;
+  }
+
+  /* Reviews */
+  .reviews {
+    padding: 0 60px;
+}
+
+.reviews__photo {
+    width: 150px;
+    height: 150px;
+}
+
+.reviews__item {
+    padding-left: 175px;
+}
 }
 
 @media (max-width: 770px) {
@@ -1037,6 +1091,34 @@ hr {
   .card__item:last-child {
     border-bottom: 0;
   }
+
+  /* Wedo */
+
+  .wedo__item {
+    width: 100%;
+  }
+
+  .wedo__img {
+    margin-bottom: 0 auto 15px;
+  }
+
+  /* Reviews */
+  .reviews__photo {
+    position: static;
+    margin: 0 auto 20px;
+}
+
+.reviews__item {
+    padding-left: 0;
+}
+
+.reviews__text {
+    font-size: 16px;
+}
+
+.reviews__author {
+    font-size: 20px;
+}
 }
 
 @media (max-width: 575px) {
@@ -1079,4 +1161,45 @@ hr {
   .stat__num {
     font-size: 52px;
   }
+
+  /* Services */
+
+  .services {
+    justify-content: center;
+  }
+
+  .services__item {
+    width: 100%;
+    max-width: 400px;
+    padding-left: 55px;
+    padding-right: 0;
+  }
+
+  .services__icon {
+    left: 0;
+  }
+
+  .devices {
+    max-width: 320px;
+  }
+
+  .devices__item--iphone {
+    width: 180px;
+    bottom: -50px;
+    right: -80px;
+  }
+
+  /* Wedo */
+  .wedo__img {
+    display: none;
+  }
+
+  /* Reviews */
+  .reviews {
+    padding: 0;
+}
+
+.reviews__btn {
+    top: 18%;
+}
 }
