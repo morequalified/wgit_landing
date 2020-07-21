@@ -188,7 +188,6 @@ hr {
 }
 
 .header.fixed {
-  padding-top: 10px 0;
   background-color: #f99276;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 
@@ -198,6 +197,10 @@ hr {
   right: 0;
 
   transform: translate3d(0, 0, 0);
+}
+
+.header.active {
+  background-color: #f99276;
 }
 
 
@@ -291,6 +294,8 @@ hr {
   position: absolute;
   left: 0;
   z-index: 1;
+
+  transition: transform 0.2s linear;
 }
 
 .nav__toggle__item::before {
@@ -299,6 +304,20 @@ hr {
 
 .nav__toggle__item::after {
   bottom: -8px;
+}
+
+.nav__toggle.active .nav__toggle__item {
+  background: none;
+}
+
+.nav__toggle.active .nav__toggle__item::before {
+  transform-origin: left top;
+  transform: rotate(45deg) translate3d(0px, -3px, 0);
+}
+
+.nav__toggle.active .nav__toggle__item::after {
+  transform-origin: left bottom;
+  transform: rotate(-45deg) translate3d(0px, 3px, 0);
 }
 
 
@@ -1417,6 +1436,18 @@ hr {
   /* Nav */
   .nav {
       display: none;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+
+      background-color:  #f99276;
+  }
+
+  .nav__link {
+    display: block;
+    margin: 0;
+    padding: 8px 20px;
   }
 
   .header {
